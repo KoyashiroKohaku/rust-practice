@@ -8,7 +8,7 @@ fn main() {
                     println!("{}", line);
                 }
             }
-            Err(error) => eprintln!("[cat-rs error]: {}", error),
+            Err(error) => eprintln!("[cat-rs error]: `{}`: {}", &arg, error),
         };
     }
 }
