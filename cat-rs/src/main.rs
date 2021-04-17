@@ -8,7 +8,10 @@ fn main() {
                     println!("{}", line);
                 }
             }
-            Err(error) => eprintln!("[cat-rs error]: `{}`: {}", &arg, error),
+            Err(error) => {
+                eprintln!("[cat-rs error]: `{}`: {}", &arg, error);
+                std::process::exit(1);
+            }
         };
     }
 }
